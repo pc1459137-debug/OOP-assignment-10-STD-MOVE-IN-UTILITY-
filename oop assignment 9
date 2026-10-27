@@ -1,0 +1,26 @@
+//To write a C++ program to demonstrate the use of std::move() from the <utility> header file.
+
+#include <iostream>
+#include <string>
+#include <utility>
+using namespace std;
+
+int main() {
+    string source = "Hello, C++ move semantics!";
+
+    cout << "Before move:" << endl;
+    cout << "Source string: " << source << endl;
+
+    string destination = std::move(source);
+
+    cout << "\nAfter move:" << endl;
+    cout << "Destination string: " << destination << endl;
+    cout << "Source string: " << source << endl;
+
+    source = "Source string reused";
+
+    cout << "\nAfter reusing source:" << endl;
+    cout << "Source string: " << source << endl;
+
+    return 0;
+}
